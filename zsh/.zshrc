@@ -1,7 +1,15 @@
 # Autocompletion fish like
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# pyenv file
+source ~/.zshenv
+
+# export virtualenv variable to work with pyenv
+alias virtualenv="virtualenv -p '/home/silentnauscopy/.pyenv/shims/python'"
 export ZSH="/home/silentnauscopy/.oh-my-zsh"
+
+# local bin add to PATH
+export PATH="$PATH:/home/silentnauscopy/.local/bin"
 
 # Show OS info when opening a new terminal
 neofetch
@@ -97,7 +105,7 @@ plugins=(git
 source $ZSH/oh-my-zsh.sh
 
 # Prompt elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon custom_user dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon custom_user dir vcs virtualenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs time battery)
 
 source /home/silentnauscopy/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

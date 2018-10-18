@@ -11,6 +11,9 @@ export ZSH="/home/silentnauscopy/.oh-my-zsh"
 # local bin add to PATH
 export PATH="$PATH:/home/silentnauscopy/.local/bin"
 
+# Set vim as editor
+export EDITOR="vim"
+
 # Show OS info when opening a new terminal
 neofetch
 

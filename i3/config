@@ -10,12 +10,11 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # (No) Title Bars
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 
 # Gaps
-gaps inner 10
-gaps outer 0
-smart_gaps on
+gaps inner 8
+# smart_gaps on
 
 
 set $mod Mod4
@@ -193,7 +192,7 @@ set $darkgreen   #98971a
 set $yellow      #fabd2f
 set $darkyellow  #d79921
 set $blue        #83a598
-set $darkblue    #458588
+set $darkblue    #1966FF
 set $magenta     #d3869b
 set $darkmagenta #b16286
 set $cyan        #8ec07c
@@ -205,12 +204,12 @@ set $transparent #00000000
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.focused          $bg-color           $darkblue          $text-color          #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
-hide_edge_borders both
+hide_edge_borders smart
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #
@@ -220,11 +219,11 @@ bar {
 	position top
   	status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	colors {
-		background $bg-color
-	    	separator #757575
+		background $darkblack
+	    	separator #1966FF
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		focused_workspace  $darkblack             $darkblack             $text-color
+		inactive_workspace $darkblack             $darkblack             $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
 }
